@@ -14,6 +14,7 @@
       data: {
         columns: [
           ['Insulin Dose'],
+          ['BG'],
         ],
         type: 'bar'
       },
@@ -29,7 +30,8 @@
         var messageList = JSON.parse(message);
         chart.load({
           columns: [
-            ['Insulin Dose'].concat(messageList),
+            ['Insulin Dose'].concat(messageList.InsulinDose),
+            ['BG'].concat(messageList.BG),
           ]
         });        
       } catch (e) {
