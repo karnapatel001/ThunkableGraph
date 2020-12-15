@@ -13,7 +13,7 @@
       bindto: '#chart',
       data: {
         columns: [
-          ['data1'],
+          ['Insulin Dose'],
         ],
         type: 'bar'
       },
@@ -29,7 +29,7 @@
         var messageList = JSON.parse(message);
         chart.load({
           columns: [
-            ['data1'].concat(messageList),
+            ['Insulin Dose'].concat(messageList),
           ]
         });        
       } catch (e) {
